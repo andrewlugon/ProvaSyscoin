@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'localhost:3000/provasyscoin?'
+    baseURL: 'https://syscoinapi.herokuapp.com/provasyscoin?'
 });
 
 export default api;
