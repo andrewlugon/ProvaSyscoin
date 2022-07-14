@@ -1,23 +1,31 @@
-import api from "./api";
-import React, { useEffect } from "react";
+import React, { Component } from 'react';
+import api from './api';
 
-function App() {
- useEffect(()=>{
-  api.get('provasyscoin?user="syscoin"&password="meEscolhe"', {
-    auth: {
-      username: 'syscoin',
-      password: 'meEscolhe'
+class App extends Component {
+
+
+
+  async componentDidMount() {
+    const response = await api.get('provasyscoin?user="syscoin"&password="meEscolhe"', {
+      auth: {
+        username: 'syscoin',
+        password: 'meEscolhe'
+      }
     }
+    ).then((response) => alert(response.data))
+    .catch((err) => {
+      console.error("ops! ocorreu um erro" + err);
+   });
   }
-  ).then((response) => alert(response.data))
-  .catch((err) => {
-    console.error("ops! ocorreu um erro" + err);
- });
- 
-},[]); 
-  
-   
-  
-}
+
+  render() {
+
+    return (
+      <div>
+        componentDidMount();
+      </div>
+    );
+  };
+};
 
 export default App;
