@@ -2,7 +2,7 @@ import api from "./api";
 import axios from 'axios';
 
 function App() {
-  api.get('user="syscoin"&password="meEscolhe"', {
+  api.get('provasyscoin?user="syscoin"&password="meEscolhe"', {
     auth: {
       username: 'syscoin',
       password: 'meEscolhe'
