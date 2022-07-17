@@ -2,8 +2,7 @@
 import RoutesApp from "./Router";
 
 function App() {
-  
-  <RoutesApp/>
+ <RoutesApp/>
   
 }
 
